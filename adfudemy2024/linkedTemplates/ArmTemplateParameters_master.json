@@ -5,14 +5,50 @@
 		"factoryName": {
 			"value": "adfudemy2024"
 		},
+		"lsADLStoSQL_connectionString": {
+			"value": ""
+		},
+		"lsADLStoSQL1_password": {
+			"value": ""
+		},
+		"lsSQLDb_password": {
+			"value": ""
+		},
 		"ls_ablob_covidreportingsa_connectionString": {
 			"value": ""
 		},
 		"ls_adls_covidreportingdl_accountKey": {
 			"value": ""
 		},
+		"lsADLStoSQL1_properties_typeProperties_server": {
+			"value": "covid-practice-srv.database.windows.net"
+		},
+		"lsADLStoSQL1_properties_typeProperties_database": {
+			"value": "covid-db"
+		},
+		"lsADLStoSQL1_properties_typeProperties_userName": {
+			"value": "adm"
+		},
+		"lsSQLDb_properties_typeProperties_server": {
+			"value": "covid-practice-srv.database.windows.net"
+		},
+		"lsSQLDb_properties_typeProperties_database": {
+			"value": "covid-db"
+		},
+		"lsSQLDb_properties_typeProperties_userName": {
+			"value": "adm"
+		},
 		"ls_adls_covidreportingdl_properties_typeProperties_url": {
 			"value": "https://covidpracticeudemy2024.dfs.core.windows.net/"
+		},
+		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
+			"value": "https://github.com"
+		},
+		"tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
+			"value": "cloudboxacademy/covid19/blob/main/ecdc_data/hospital_admissions.csv"
+		},
+		"tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sinkFile": {
+			"value": "hospital_admissions.csv"
 		},
 		"containerUri": {
 			"value": ""

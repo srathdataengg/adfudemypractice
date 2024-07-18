@@ -7,6 +7,18 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfudemy2024"
 		},
+		"lsADLStoSQL_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'lsADLStoSQL'"
+		},
+		"lsADLStoSQL1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'lsADLStoSQL1'"
+		},
+		"lsSQLDb_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'lsSQLDb'"
+		},
 		"ls_ablob_covidreportingsa_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_ablob_covidreportingsa'"
@@ -15,9 +27,45 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_adls_covidreportingdl'"
 		},
+		"lsADLStoSQL1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "covid-practice-srv.database.windows.net"
+		},
+		"lsADLStoSQL1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "covid-db"
+		},
+		"lsADLStoSQL1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adm"
+		},
+		"lsSQLDb_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "covid-practice-srv.database.windows.net"
+		},
+		"lsSQLDb_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "covid-db"
+		},
+		"lsSQLDb_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adm"
+		},
 		"ls_adls_covidreportingdl_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://covidpracticeudemy2024.dfs.core.windows.net/"
+		},
+		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com"
+		},
+		"tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
+			"type": "string",
+			"defaultValue": "cloudboxacademy/covid19/blob/main/ecdc_data/hospital_admissions.csv"
+		},
+		"tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sinkFile": {
+			"type": "string",
+			"defaultValue": "hospital_admissions.csv"
 		},
 		"containerUri": {
 			"type": "string",
@@ -46,14 +94,50 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"lsADLStoSQL_connectionString": {
+						"value": "[parameters('lsADLStoSQL_connectionString')]"
+					},
+					"lsADLStoSQL1_password": {
+						"value": "[parameters('lsADLStoSQL1_password')]"
+					},
+					"lsSQLDb_password": {
+						"value": "[parameters('lsSQLDb_password')]"
+					},
 					"ls_ablob_covidreportingsa_connectionString": {
 						"value": "[parameters('ls_ablob_covidreportingsa_connectionString')]"
 					},
 					"ls_adls_covidreportingdl_accountKey": {
 						"value": "[parameters('ls_adls_covidreportingdl_accountKey')]"
 					},
+					"lsADLStoSQL1_properties_typeProperties_server": {
+						"value": "[parameters('lsADLStoSQL1_properties_typeProperties_server')]"
+					},
+					"lsADLStoSQL1_properties_typeProperties_database": {
+						"value": "[parameters('lsADLStoSQL1_properties_typeProperties_database')]"
+					},
+					"lsADLStoSQL1_properties_typeProperties_userName": {
+						"value": "[parameters('lsADLStoSQL1_properties_typeProperties_userName')]"
+					},
+					"lsSQLDb_properties_typeProperties_server": {
+						"value": "[parameters('lsSQLDb_properties_typeProperties_server')]"
+					},
+					"lsSQLDb_properties_typeProperties_database": {
+						"value": "[parameters('lsSQLDb_properties_typeProperties_database')]"
+					},
+					"lsSQLDb_properties_typeProperties_userName": {
+						"value": "[parameters('lsSQLDb_properties_typeProperties_userName')]"
+					},
 					"ls_adls_covidreportingdl_properties_typeProperties_url": {
 						"value": "[parameters('ls_adls_covidreportingdl_properties_typeProperties_url')]"
+					},
+					"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
+						"value": "[parameters('ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url')]"
+					},
+					"tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
+						"value": "[parameters('tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL')]"
+					},
+					"tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sinkFile": {
+						"value": "[parameters('tr_ingest_hospital_admission_data_properties_pl_ingest_ecdc_data_parameters_sinkFile')]"
 					}
 				}
 			},
