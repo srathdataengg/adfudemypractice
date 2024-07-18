@@ -1,0 +1,28 @@
+{
+	"name": "EmployeeNew",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lsADLStoSQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "EmployeesNew.csv.txt",
+				"container": "mycontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "id\tname\tcity\tsalary",
+				"type": "String"
+			}
+		]
+	}
+}
